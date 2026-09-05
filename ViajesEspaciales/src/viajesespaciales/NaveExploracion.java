@@ -34,7 +34,7 @@ public class NaveExploracion extends NaveEspacial {
 
         this.galaxiaDestino = "Desconocida";
         this.anosLuzRecorridos = 0L;
-        this.nivelBateria = 100.0f;
+        this.nivelBateria = 100.0;
         this.clasificacionPlaneta = 'X';
     }
 
