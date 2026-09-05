@@ -8,7 +8,8 @@ public class NaveEspacial
     private double velocidadLuzMaxima;
     private boolean motorActivo;
     
-    //CONSTRUCTORES
+    //CONSTRUCTORES - EL PRIMERO SE PLANTEA COMO UNA NAVE PERSONALIZADA, EL SEGUNDO COMO UNA NAVE ESTANDAR O DE TRANSPORTE, 
+    //Y EL TERCERO COMO UNA NAVE EN CONSTRUCCION O UN DRON.
     public NaveEspacial(String nombreNave, int tripulacion, double velocidadLuzMaxima, boolean motorActivo) {
         
         this.nombreNave = nombreNave;
@@ -24,7 +25,7 @@ public class NaveEspacial
 
     public NaveEspacial(String nombreNave) {
         
-        this(nombreNave, 1);
+        this(nombreNave, 1, 0.6, false);
     }
     //GETTERS Y SETTERS
     
@@ -67,7 +68,8 @@ public class NaveEspacial
     ///METODO TOSTRING
     @Override
     public String toString() {
-        return "NaveEspacial{" + "Nombre de la nave=" + nombreNave + ", Tripulacion=" + tripulacion + ", Velocidad Luz Maxima=" + velocidadLuzMaxima + ", Motor Activo=" + motorActivo + '}';
+        return "Clase (NaveEspacial) : " + "\n Nombre de la Nave = " + nombreNave + "\n Tripulacion = " + tripulacion + 
+                "\n Velocidad Luz Maxima = " + velocidadLuzMaxima + "\n Motor Activo = " + motorActivo;
     }
     
     

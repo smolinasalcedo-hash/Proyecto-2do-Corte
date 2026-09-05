@@ -8,9 +8,11 @@ public class NaveExploracion extends NaveEspacial {
     private String galaxiaDestino;
     private long anosLuzRecorridos;
     private double nivelBateria;
-    private char clasificacionPlaneta; // S: masivo - A: grande - B: normal - C: pequeño - X: indefinido,
+    private char clasificacionPlaneta; // S: Masivo - A: Grande - B: Normal - C: Pequeño - X: Indefinido - P: Peligroso;
 
-    //CONSTRUCTORES
+    //CONSTRUCTORES - EL PRIMERO SE PLANTEA COMO UNA NAVE PERSONALIZADA NUEVA O A MITAD DE UN VIAJE, EL SEGUNDO COMO UNA NAVE RECIEN CONSTRUIDA,
+    //Y EL TERCERO COMO UNA SONDA INACTIVA O EN RESERVA
+    
     public NaveExploracion(String galaxiaDestino, long anosLuzRecorridos, double nivelBateria, char clasificacionPlaneta, String nombreNave, int tripulacion, double velocidadLuzMaxima, boolean motorActivo) {
         super(nombreNave, tripulacion, velocidadLuzMaxima, motorActivo);
         
@@ -31,7 +33,7 @@ public class NaveExploracion extends NaveEspacial {
     }
 
     public NaveExploracion(String nombreNave) {
-        super(nombreNave);
+        super(nombreNave, 0, 1.0, false);
         
         this.galaxiaDestino = "Desconocida";
         this.anosLuzRecorridos = 0L;
@@ -80,7 +82,8 @@ public class NaveExploracion extends NaveEspacial {
     //TOSTRING
     @Override
     public String toString() {
-        return super.toString() + "NaveExploracion{" + "Galaxia Destino=" + galaxiaDestino + ", Anos Luz Recorridos=" + anosLuzRecorridos + ", Nivel Bateria=" + nivelBateria + ", Clasificacion Planeta=" + clasificacionPlaneta + '}';
+        return super.toString() + "\nClase (NaveExploracion) : " + "\n Galaxia Destino = " + galaxiaDestino + "\n Anos Luz Recorridos = " + anosLuzRecorridos + 
+                "\n Nivel Bateria = " + nivelBateria + "\n Clasificacion Planeta = " + clasificacionPlaneta;
     }
 
    
